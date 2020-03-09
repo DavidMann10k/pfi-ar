@@ -1,0 +1,20 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: Home
+---
+
+
+    <!-- <a-marker preset="hiro"> -->
+<a-scene embedded arjs>
+  <a-marker-camera type="pattern" patternUrl="pf-marker.patt">
+      <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+  </a-marker-camera>
+  <a-entity camera></a-entity>
+</a-scene>
+{{ site.static_files | inspect }}
+{{ for file in site.static_files}}
+  {{ file | inspect }}
+{{ endfor }}
